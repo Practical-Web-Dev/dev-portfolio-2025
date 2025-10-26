@@ -400,6 +400,14 @@ Featured Projects
   font-size: 24px;
 }
 
+.featured-project-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
 .featured-project-link {
   color: #007bff;
   padding: 0 10px;
@@ -527,6 +535,7 @@ Media Queries
   .featured-project-text {
     padding-left: 0rem;
     text-align: center;
+    width: 100%;
   }
 
   .featured-project-text h4 {
@@ -633,6 +642,11 @@ Media Queries
 
   .featured-project-text {
     padding-left: 0rem;
+    padding-top: .5rem;
+  }
+
+  a.featured-project-link {
+    padding: 10px;
   }
 
   .featured-project-text h4 {

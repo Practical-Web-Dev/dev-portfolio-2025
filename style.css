@@ -1,0 +1,678 @@
+/* 
+
+Dark Mode Colors
+background-color: #171c28;
+    color: #afafbf;
+
+
+*/
+
+/* 
+
+
+
+
+
+
+Global Styles
+
+
+
+
+
+*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+
+  letter-spacing: 1px;
+  background: #fff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 5rem;
+  overflow: hidden;
+}
+
+.dark-mode {
+  background-color: #171c28;
+  color: #afafbf;
+}
+
+.dark-mode-text {
+  color: #afafbf;
+}
+
+.bold-text {
+  font-weight: 900;
+}
+
+.blue-text {
+  color: #007bff;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+
+/* 
+
+
+
+
+
+
+Header
+
+
+
+
+
+*/
+
+header {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #bae67e;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #bae67e;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.light-dark-toggle {
+  display: flex;
+  align-items: center;
+}
+
+/* 
+
+
+
+
+
+
+Showcase
+
+
+
+
+
+*/
+
+.showcase {
+  height: 100vh;
+  margin-top: 4rem;
+}
+
+.showcase-text-pic-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-greeting {
+  line-height: 1.7;
+}
+
+.showcase-greeting h1 {
+  font-weight: 300;
+  font-size: 52px;
+}
+
+.wave {
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: 1;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+  width: 48px;
+  cursor: pointer;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave-click {
+  animation-name: wave-click;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: 1;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+}
+
+@keyframes wave-click {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.showcase-greeting h2 {
+  font-weight: 300;
+  font-size: 32px;
+  width: 90%;
+}
+
+.showcase-img img {
+  margin-top: 4rem;
+  width: 300px;
+  border-radius: 50%;
+}
+
+/* 
+
+
+
+
+
+
+About Me
+
+
+
+
+
+*/
+
+.video-container {
+  text-align: center;
+}
+
+.about-video {
+  aspect-ratio: 16 / 9;
+  max-width: 700px;
+}
+
+/* 
+
+
+
+
+
+My Skills
+
+
+
+
+
+*/
+
+#skills {
+  margin-top: 7rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  row-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skills-container i {
+  font-size: 45px;
+  cursor: pointer;
+  transition: all .1s ease-in;
+}
+
+.skills-container i:hover {
+  color: #007bff;
+}
+
+/* 
+
+
+
+
+
+
+Featured Projects
+
+
+
+
+
+*/
+
+#featured-projects {
+  margin-top: 7rem;
+}
+
+.featured-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.featured-project-text {
+  padding-left: 0rem;
+  width: 50%;
+  font-size: 24px;
+}
+
+.featured-project-link {
+  color: #007bff;
+  padding: 0 10px;
+}
+
+.fa-youtube {
+  color: #FF0000;
+}
+
+/* 
+
+
+
+
+
+
+Other Projects
+
+
+
+
+
+*/
+
+#other-projects h2 {
+  margin-top: 10rem;
+}
+
+.other-project {
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.other-project-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px;
+}
+
+.other-project-title a {
+  margin-bottom: -20px;
+  transition: transform 0.3s ease-in-out;
+  color: black;
+}
+
+.other-project-title a.other-project-icon:hover {
+  transform: translateX(20%);
+}
+
+.fa-arrow-right {
+  padding-left: 10px;
+  color: #007bff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.other-project-tech-used span {
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+/* 
+
+
+
+
+
+
+Footer
+
+
+
+
+
+*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.footer-link {
+  padding: 0px 10px;
+  color: #007bff;
+}
+
+/* 
+
+
+
+
+
+
+Media Queries
+
+
+
+
+
+*/
+
+@media only screen and (max-width: 1200px) {
+  .showcase {
+    height: auto;
+  }
+
+  #about-me {
+    margin-top: 8rem;
+  }
+
+  #featured-projects {
+    margin-top: 6rem;
+  }
+
+  .featured-project {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .featured-project-text {
+    padding-left: 0rem;
+    text-align: center;
+  }
+
+  .featured-project-text h4 {
+    text-align: center;
+  }
+
+  .featured-project-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 15px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text-pic-container {
+    flex-direction: column;
+  }
+
+  .showcase-greeting h1 {
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .showcase-greeting h2 {
+    font-weight: 300;
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .showcase-img img {
+    margin-top: 2rem;
+    width: 300px;
+    border-radius: 50%;
+  }
+
+  .contact-me {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .point-right {
+    display: none;
+  }
+
+  .point-down {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .get-in-touch {
+    padding-top: 5px;
+  }
+
+  #about-me {
+    margin-top: 5rem;
+  }
+
+  #skills {
+    margin-top: 7rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 4rem;
+  }
+
+  .skills-container i {
+    font-size: 45px;
+    cursor: pointer;
+    transition: all .1s ease-in;
+  }
+
+  #featured-projects {
+    margin-top: 4rem;
+  }
+
+  .featured-project {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .featured-project-text {
+    padding-left: 0rem;
+  }
+
+  .featured-project-text h4 {
+    text-align: center;
+  }
+
+  .featured-project-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  #other-projects h2 {
+    margin-top: 8rem;
+  }
+
+  #other-projects {
+    margin-top: 6rem;
+  }
+
+  .other-project-tech-used {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .other-project-tech-used span {
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 5px 8px;
+    margin: 5px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+  p {
+    font-size: 13px;
+  }
+
+}
